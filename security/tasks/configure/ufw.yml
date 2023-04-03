@@ -1,0 +1,39 @@
+---
+- name: Reset UFW
+  ufw:
+    state: reset
+  when:
+    - common_security_ufw_reset
+
+- name: Allow SSH from admin ip addresses
+  ufw:
+    rule: allow
+    proto: tcp
+    to_port: 22
+    direction: in
+    src: "{{ item }}"
+    comment: allow ssh from admin ip address
+  with_items: "{{ common_security_admin_ip_addresses }}"
+
+- name: Set default all outgoing traffic policy
+  ufw:
+    direction: outgoing
+    policy: "{{ common_security_ufw_default_outgoing_policy }}"
+    comment: "{{ common_security_ufw_default_outgoing_policy }} all outgoing traffic by default"
+
+- name: Set default all incoming traffic policy
+  ufw:
+    direction: incoming
+    policy: "{{ common_security_ufw_default_incoming_policy }}"
+    comment: "{{ common_security_ufw_default_incoming_policy }} all incoming traffic by default"
+
+- name: Set default all routed traffic policy
+  ufw:
+    direction: routed
+    policy: "{{ common_security_ufw_default_route_policy }}"
+    comment: "{{ common_security_ufw_default_route_policy }} all routed traffic by default"
+
+- name: Set UFW status
+  ufw:
+    state: "{{ common_security_ufw_status }}"
+    comment: set ufw status to {{ common_security_ufw_status }}

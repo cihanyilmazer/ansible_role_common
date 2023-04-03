@@ -1,0 +1,7 @@
+---
+- import_tasks: configure/ipv6.yml
+  tags: setup
+- import_tasks: configure/sshd.yml
+  tags: setup
+- import_tasks: configure/ufw.yml
+  tags: operational

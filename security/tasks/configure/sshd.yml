@@ -1,0 +1,9 @@
+---
+- name: Copy sshd.conf to /etc/ssh/sshd_config.d/
+  copy:
+    src: sshd.conf
+    dest: /etc/ssh/sshd_config.d/custom_sshd.conf
+    owner: root
+    group: root
+    mode: 0600
+  notify: reload sshd

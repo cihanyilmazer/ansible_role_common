@@ -1,0 +1,17 @@
+---
+- name: Create sudo user
+  user:
+    name: "{{ common_system_sudo_user_name }}"
+    shell: /bin/bash
+    create_home: yes
+    password: "{{ common_system_sudo_user_password }}"
+    append: yes
+    groups:
+      - sudo
+    state: present
+
+- name: Copy SSH Key for sudo user
+  ansible.posix.authorized_key:
+    user: "{{ common_system_sudo_user_name }}"
+    state: present
+    key: "{{ lookup(\"file\", \"{{ common_system_sudo_user_sshpubkey }}\") }}"
