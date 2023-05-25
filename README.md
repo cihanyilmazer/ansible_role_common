@@ -75,7 +75,7 @@ MIT
 Author Information
 ------------------
 
-Cihan Yilmazer\
-https://www.cihanyilmazer.com\
-https://www.github.com/cihanyilmazer\
-https://galaxy.ansible.com/cihanyilmazer\
+Cihan Yilmazer<br />
+https://www.cihanyilmazer.com<br />
+https://www.github.com/cihanyilmazer<br />
+https://galaxy.ansible.com/cihanyilmazer<br />
