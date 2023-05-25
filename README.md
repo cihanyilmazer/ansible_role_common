@@ -12,20 +12,20 @@ Role Variables
 --------------
 
 ## /system
-### Hostname
+### Hostname - Auto
 ```
 common_system_hostname: "{{ inventory_hostname }}"
 ```
 
-### DNS
+### DNS - Required
 ```
 # common_system_dns_server_1: "8.8.8.8"
 ```
-### Hosts
+### Hosts - Optional
 ```
 # common_system_custom_hosts_entries: []
 ```
-### User Management
+### User Management - Required
 ```
 # common_system_sudo_user_name: "admin"
 # common_system_sudo_user_password: "admin"
@@ -33,7 +33,7 @@ common_system_hostname: "{{ inventory_hostname }}"
 ```
 
 ## /security
-### UFW
+### UFW - Admin IPs Required
 ```
 common_security_ufw_reset: false
 common_security_ufw_default_outgoing_policy: allow
@@ -44,7 +44,7 @@ common_security_ufw_status: enabled
 # common_security_admin_ip_addresses:
 #   - 0.0.0.0/0
 ```
-### IPv6
+### IPv6 - Optional
 ```
 common_security_disable_ipv6: 1
 ```
