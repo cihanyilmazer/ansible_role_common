@@ -16,8 +16,9 @@ Role Variables
 common_system_hostname: "{{ inventory_hostname }}"
 
 # DNS
+```
 # common_system_dns_server_1: "8.8.8.8"
-
+```
 # Hosts
 # common_system_custom_hosts_entries: []
 
