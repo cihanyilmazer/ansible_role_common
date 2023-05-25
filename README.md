@@ -57,7 +57,10 @@ No dependency.
 Example Playbook
 ----------------
 
-Install Using: ansible-galaxy install cihanyilmazer.ansible_role_common
+Install
+```
+ansible-galaxy install cihanyilmazer.ansible_role_common
+```
 
     - hosts: servers
       roles:
@@ -73,6 +76,6 @@ Author Information
 ------------------
 
 Cihan Yilmazer
-https//www.cihanyilmazer.com
+https://www.cihanyilmazer.com
 https://www.github.com/cihanyilmazer
 https://galaxy.ansible.com/cihanyilmazer
