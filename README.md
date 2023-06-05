@@ -67,6 +67,22 @@ ansible-galaxy install cihanyilmazer.ansible_role_common
          - cihanyilmazer.ansible_role_common/system
          - cihanyilmazer.ansible_role_common/security
 
+
+Run with Tags
+Possible Options
+- dns
+- hostname
+- sudo_users
+- ipv4_forwards
+- hosts
+- ipv6
+- sshd
+- ufw
+
+```
+ansible-playbook -i hosts playbook.yml --tags initial --limit servers
+```
+
 License
 -------
 
