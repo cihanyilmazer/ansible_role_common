@@ -1,4 +1,16 @@
 ---
 - import_tasks: configure/ipv6.yml
+  tags:
+    - ipv6
+    - initial
+    - never
 - import_tasks: configure/sshd.yml
+  tags:
+    - sshd
+    - initial
+    - never
 - import_tasks: configure/ufw.yml
+  tags:
+    - ufw
+    - initial
+    - never
