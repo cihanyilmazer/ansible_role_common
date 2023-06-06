@@ -3,14 +3,17 @@
   tags:
     - ipv6
     - common
+    - common-security
     - never
 - import_tasks: configure/sshd.yml
   tags:
     - sshd
     - common
+    - common-security
     - never
 - import_tasks: configure/ufw.yml
   tags:
     - ufw
     - common
+    - common-security
     - never

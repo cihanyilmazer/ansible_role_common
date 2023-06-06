@@ -70,6 +70,8 @@ ansible-galaxy install cihanyilmazer.ansible_role_common
 
 Run with Custom Tags (at least one tag must be provided)
 - common
+- common-system
+- common-security
 - dns_servers
 - hostname
 - sudo_users

@@ -3,24 +3,29 @@
   tags:
     - dns_servers
     - common
+    - common-system
     - never
 - import_tasks: configure/hostname.yml
   tags:
     - hostname
     - common
+    - common-system
     - never
 - import_tasks: configure/sudo_user.yml
   tags:
     - sudo_user
     - common
+    - common-system
     - never
 - import_tasks: configure/ipv4_forward.yml
   tags:
     - ipv4_forward
     - common
+    - common-system
     - never
 - import_tasks: configure/hosts.yml
   tags:
     - hosts
     - common
+    - common-system
     - never
