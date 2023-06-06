@@ -1,26 +1,26 @@
 ---
 - import_tasks: configure/dns_servers.yml
   tags:
-    - dns
-    - initial
+    - dns_servers
+    - common
     - never
 - import_tasks: configure/hostname.yml
   tags:
     - hostname
-    - initial
+    - common
     - never
 - import_tasks: configure/sudo_user.yml
   tags:
     - sudo_user
-    - initial
+    - common
     - never
 - import_tasks: configure/ipv4_forward.yml
   tags:
     - ipv4_forward
-    - initial
+    - common
     - never
 - import_tasks: configure/hosts.yml
   tags:
     - hosts
-    - initial
+    - common
     - never
