@@ -20,18 +20,24 @@
     direction: outgoing
     policy: "{{ common_security_ufw_default_outgoing_policy }}"
     comment: "{{ common_security_ufw_default_outgoing_policy }} all outgoing traffic by default"
+  when:
+    - common_security_ufw_default_outgoing_policy is defined and common_security_ufw_default_outgoing_policy
 
 - name: Set default all incoming traffic policy
   ufw:
     direction: incoming
     policy: "{{ common_security_ufw_default_incoming_policy }}"
     comment: "{{ common_security_ufw_default_incoming_policy }} all incoming traffic by default"
+  when:
+    - common_security_ufw_default_incoming_policy is defined and common_security_ufw_default_incoming_policy
 
 - name: Set default all routed traffic policy
   ufw:
     direction: routed
     policy: "{{ common_security_ufw_default_route_policy }}"
     comment: "{{ common_security_ufw_default_route_policy }} all routed traffic by default"
+  when:
+    - common_security_ufw_default_route_policy is defined and common_security_ufw_default_route_policy
 
 - name: Set UFW status
   ufw:
